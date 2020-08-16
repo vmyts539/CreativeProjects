@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="main.css">
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+  <div class="splash"><a href=""><img src="big-logo.png" alt="" class="fade-in"></a></div>
+
+  <div class="menu-sidebar">
+    <ul>
+      <li><a href="">Home</a></li>
+      <li><a href="">About</a></li>
+      <li><a href="">Training</a></li>
+      <li><a href="">Team</a></li>
+      <li><a href="">Contact</a></li>
+    </ul>
+  </div>
+
+  <div class="wrapper">
+    <div class="header d-flex align-items-center justify-content-between">
+      <div class="logo"><img src="logo.png" alt=""></div>
+      <div class="toggle" onclick="toggleMenu();"></div>
+    </div>
+  </div>
+
+  <script>
+    // SPLASH SCREEN
+    const splash = document.querySelector('.splash');
+
+    document.addEventListener('DOMContentLoaded', (e) => {
+      setTimeout(() => {
+        splash.classList.add('display-none');
+      }, 2000);
+    })
+
+    // MENU TOGGLER
+    function toggleMenu() {
+      const menuToggle = document.querySelector('.toggle');
+      const bannerToggle = document.querySelector('.wrapper');
+      menuToggle.classList.toggle('active');
+      bannerToggle.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

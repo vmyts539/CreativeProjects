@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Bg Responsive</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <div class="menu">
+    <ul>
+      <li><a href="">Home</a></li>
+      <li><a href="">About</a></li>
+      <li><a href="">Training</a></li>
+      <li><a href="">Team</a></li>
+      <li><a href="">Contact</a></li>
+    </ul>
+  </div>
+  <section class="banner">
+    <header>
+      <h2 class="logo">Your Logo</h2>
+
+      <div class="toggle" onclick="toggleMenu();"></div>
+    </header>
+
+    <video src="bg.mp4" autoplay loop muted></video>
+
+    <div class="overlay"></div>
+
+    <div class="text">
+      <h2>Be Stronger</h2>
+      <h3>Never Give Up</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur inventore maiores, dolorum assumenda sequi fugiat omnis necessitatibus voluptatibus cumque, molestiae qui architecto nemo mollitia eum, vero tempora fugit magnam esse unde magni hic sunt aperiam ut! Harum itaque libero iusto sunt veniam voluptatum dolores pariatur possimus corporis, ab ipsum voluptatem!</p>
+      <a href="">Join Us</a>
+    </div>
+
+    <ul class="socials">
+      <li><a href=""><img src="facebook.png" alt=""></a></li>
+      <li><a href=""><img src="twitter.png" alt=""></a></li>
+      <li><a href=""><img src="instagram.png" alt=""></a></li>
+    </ul>
+  </section>
+  <script>
+    function toggleMenu() {
+      var menuToggle = document.querySelector('.toggle');
+      var bannerToggle = document.querySelector('.banner');
+      menuToggle.classList.toggle('active');
+      bannerToggle.classList.toggle('active');
+
+    }
+  </script>
+</body>
+</html>
