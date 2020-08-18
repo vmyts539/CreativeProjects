@@ -40,7 +40,7 @@ body {
   align-items: center;
 }
 
-.container .card .face.face1 {
+.container .card .face.face1 .content {
   padding: 20px;
 }
 

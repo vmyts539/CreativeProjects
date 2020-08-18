@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SignIn SignUp Form</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <section>
+    <div class="container">
+      <div class="user singinBx">
+        <div class="imgBx"><img src="https://images.unsplash.com/photo-1566864222010-d45675442c31?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80" alt=""></div>
+        <div class="formBx">
+          <form>
+            <h2>Sign In</h2>
+            <input type="text" placeholder="Username">
+            <input type="password" placeholder="Password">
+            <input type="submit" value="Login">
+            <p class="signup">Don't have an account? <a href="#" onclick="toggleForm();">Sign Up.</a></p>
+          </form>
+        </div>
+      </div>
+
+      <div class="user signupBx">
+        <div class="formBx">
+          <form>
+            <h2>Create an Account</h2>
+            <input type="text" placeholder="Username">
+            <input type="email" placeholder="Email Address">
+            <input type="password" placeholder="Create Password">
+            <input type="password" placeholder="Confirm Password">
+            <input type="submit" value="Sign Up">
+            <p class="signup">Already have an account? <a href="#" onclick="toggleForm();">Sign In.</a></p>
+          </form>
+        </div>
+        <div class="imgBx"><img src="https://images.unsplash.com/photo-1565622871630-8e453c4b6ed9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80" alt=""></div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+  function toggleForm() {
+    var container = document.querySelector('.container');
+    var section = document.querySelector('section');
+    container.classList.toggle('active')
+    section.classList.toggle('active')
+  }
+
+  </script>
+</body>
+</html>
