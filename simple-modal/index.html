@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+  <button class="show" aria-haspopup="true">
+    Show Modal
+  </button>
+  <div class="mask" role="dialog"></div>
+  <div class="modal" role="alert">
+    <button class="close" role="button">X</button>
+  </div>
+
+  <script>
+    const show = document.querySelector('.show');
+    const mask = document.querySelector('.mask');
+
+    show.addEventListener("click", function(){
+      mask.classList.add('active');
+    });
+
+    function closeModal(){
+      mask.classList.remove('active');
+    }
+
+    const close = document.querySelector('.close');
+
+    close.addEventListener("click", function(){
+      closeModal();
+    });
+    mask.addEventListener("click", function(){
+      closeModal();
+    });
+  </script>
+</body>
+</html>
